@@ -38,10 +38,10 @@ public class QueryProcessor {
             num_arr = query.toLowerCase().split(":")[1].split(",");
             num1 = Integer.parseInt(num_arr[0]);
             num2 = Integer.parseInt(num_arr[1]);
-            if isPrime(num1) {
+            if (isPrime(num1)) {
                 return num1;
             }
-            else if isPrime(num2) {
+            else if (isPrime(num2)) {
                 return num2;
             }
             return "";

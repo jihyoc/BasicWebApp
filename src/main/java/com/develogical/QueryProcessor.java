@@ -14,6 +14,9 @@ public class QueryProcessor {
         if (query.toLowerCase().contains("cmu")) {
             return "17313";
         }
+        if (query.toLowerCase().contains("what is your name")) {
+            return "jcsa";
+        }
         return "";
     }
 }

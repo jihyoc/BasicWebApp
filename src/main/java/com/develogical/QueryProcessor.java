@@ -1,4 +1,4 @@
-// package com.develogical;
+package com.develogical;
 
 public class QueryProcessor {
 

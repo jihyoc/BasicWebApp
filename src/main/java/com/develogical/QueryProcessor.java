@@ -35,9 +35,9 @@ public class QueryProcessor {
             return "2016";
         }
         if (query.toLowerCase().contains("which of the following numbers are primes:")) {
-            num_arr = query.toLowerCase().split(":")[1].split(",");
-            num1 = Integer.parseInt(num_arr[0]);
-            num2 = Integer.parseInt(num_arr[1]);
+            String[] num_arr = query.toLowerCase().split(":")[1].split(",");
+            int num1 = Integer.parseInt(num_arr[0]);
+            int num2 = Integer.parseInt(num_arr[1]);
             if (isPrime(num1)) {
                 return num1;
             }
@@ -47,9 +47,9 @@ public class QueryProcessor {
             return "";
         }
         if (query.toLowerCase().contains("which of the following numbers is the largest:")) {
-            num_arr = query.toLowerCase().split(":")[1].split(",");
-            num1 = Integer.parseInt(num_arr[0]);
-            num2 = Integer.parseInt(num_arr[1]);
+            String[] num_arr = query.toLowerCase().split(":")[1].split(",");
+            int num1 = Integer.parseInt(num_arr[0]);
+            int num2 = Integer.parseInt(num_arr[1]);
             
             return math.max(num1, num2);
         }

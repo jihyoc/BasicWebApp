@@ -1,4 +1,5 @@
 package com.develogical;
+import static java.lang.Math.*;
 
 public class QueryProcessor {
     static boolean isPrime(int n)
@@ -35,23 +36,23 @@ public class QueryProcessor {
             return "2016";
         }
         if (query.toLowerCase().contains("which of the following numbers are primes:")) {
-            String[] num_arr = query.toLowerCase().split(":")[1].split(",");
+            String[] num_arr = query.split(":")[1].split(",");
             int num1 = Integer.parseInt(num_arr[0]);
             int num2 = Integer.parseInt(num_arr[1]);
             if (isPrime(num1)) {
-                return num1;
+                return Integer.toString(num1);
             }
             else if (isPrime(num2)) {
-                return num2;
+                return Integer.toString(num2);
             }
             return "";
         }
         if (query.toLowerCase().contains("which of the following numbers is the largest:")) {
-            String[] num_arr = query.toLowerCase().split(":")[1].split(",");
+            String[] num_arr = query.split(":")[1].split(",");
             int num1 = Integer.parseInt(num_arr[0]);
             int num2 = Integer.parseInt(num_arr[1]);
             
-            return math.max(num1, num2);
+            return Integer.toString(Math.max(num1, num2));
         }
 
         return "";
